@@ -1,9 +1,16 @@
 {% extends 'components/layout.html'%}
-
 {% block title %} Homepage {% endblock title%}
-
 {% block content%}
-<h1>web page</h1>
-<p>The difference between a website and a web page is that a website is a collection of web pages with information on a subject, and a web page is a smaller part of a larger website usually containing more specific information.</p>
+<h1>This is Foxes-78 Home Page</h1>
+<h3>This page is currently shows some data from API call</h3>
+<h5>Current region: {{name}}</h5>
+{%for pokemon in poke%}
+<h5>Name: {{pokemon['pokemon_species']['name']}}</h5>
+<p>API URL: {{pokemon['pokemon_species']['url']}}</p>
 
+{%endfor%}
 {%endblock content%}
+
+
+
+

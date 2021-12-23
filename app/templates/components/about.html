@@ -1,8 +1,15 @@
-{% extends 'components/layout.html'%}
+{% extends 'components/layout.html' %}
 
-{% block title %} About {% endblock %}
+{% block title %}About{% endblock %}
 
-{% block content}
-<h5>Webpage vs Website</h5>
-<p>The difference between Webpage and Website is that you can consider a book as a Website and its pages are as Web Pages. So, it is a single Web page and its URL (uniform resource locator) is unique. If you copy its link and paste it in a browser, you will see only that particular pages.Whereas the Website is a collection of webpages. The website has its own domain name which is unique throughout the world. Anything can be stored on a website like photos, videos, texts etcetera.</p>
+{% block content %}
+<h5>Welcome to the about page. :)</h5>
+<p>This is a Flask API being made by the {{ classname }} class!</p>
+<h5>The teacher of this class is {{teacher}}</h5>
+<p>The students of this class are: {{students}}</p>
+{%for student in students %}
+<p>student</p>
+<p>next --> </p>
+{% endfor%}
 {% endblock content%}
+
